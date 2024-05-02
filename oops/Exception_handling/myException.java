@@ -1,4 +1,4 @@
-package Exception_handling;
+package oops.Exception_handling;
 
 public class myException extends Exception{
     public myException(String message) {
