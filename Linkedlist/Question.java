@@ -244,7 +244,7 @@ public class Question {
     //Reverse the linkedlist from any point
 
     public  void rev(Node head,int left,int right){
-        if(size<2){
+        if(left==right){
             return;
         }
             int l=0;
@@ -258,7 +258,7 @@ public class Question {
         while(present!=null){
 
             if(l==left) {
-                while(r==right-left)
+                while(r==right-left+1)
                 present.next = prev;
                 prev = present;
                 present = next;
@@ -282,6 +282,56 @@ public class Question {
         return;
 
     }
+    //Pallindrom of linkedlist --243
+
+//    public boolean isPalindrome(Node head) {
+//
+//        Node mid=middle();
+//        Node SecondHead=inplacerev(mid);
+//        while(head!=null&&SecondHead!=null){
+//            if(head.val!=SecondHead.val){
+//                return false;
+//            }
+//            head=head.next;
+//            SecondHead=SecondHead.next;
+//
+//        }
+//        return true;
+//
+//
+//    }
+
+
+    // rRotate list
+//    public ListNode rotateRight(ListNode head, int k) {
+//        if(head==null || head.next==null||k<0){
+//            return head;
+//        }
+//        int l=1;
+//        ListNode temp=head;
+//
+//        while(temp.next!=null){
+//            l++;
+//            temp=temp.next;
+//        }
+//        temp.next=head;
+//        ListNode prev=null;
+//        ListNode present=head;
+//        for(int i=0;present!=null&&i<l-(k%l);i++){
+//            prev=present;
+//            present=present.next;
+//
+//        }
+//
+//
+//
+//        head=prev.next;
+//        prev.next=null;
+//
+//        return head;
+//
+//    }
+
 
 
 
